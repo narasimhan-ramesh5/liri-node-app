@@ -110,7 +110,7 @@ function liri_concert_lookup(artist_name){
 }
 
 function liri_movie_lookup(movie_name){
-	var queryURL = "http://www.omdbapi.com/?t=" + movie_name + "&apikey=" + omdb_credentials.apikey;
+	var queryURL = "https://www.omdbapi.com/?t=" + movie_name + "&apikey=" + omdb_credentials.apikey;
 	var rotten_tomatoes_rating;
 
 	Request(queryURL, function(error, response, body){
