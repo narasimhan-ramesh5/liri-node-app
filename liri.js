@@ -121,6 +121,11 @@ function liri_movie_lookup(movie_name){
 		//console.log(body);
 		movie_info = JSON.parse(body);
 
+		response = movie_info.Response.toLowerCase();
+		if(response === "false"){
+			return console.log(movie_info.Error);
+		}
+
 		// Look up Rotten Tomatoes rating
 		for(var i = 0; i < movie_info.Ratings.length; i++){
 			if(movie_info.Ratings[i].Source === "Rotten Tomatoes"){
